@@ -154,8 +154,9 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
-  margin-right: 8px;
+  visibility: hidden;
+  max-height: 50px;
+  margin-right: 5px;
 }
 
 .header .logo h1 {
@@ -170,6 +171,10 @@ h6 {
   padding-left: 1px;
   font-family: var(--heading-font);
   color: var(--color-primary);
+}
+
+.scrolled .header .logo img {
+  visibility: visible;
 }
 
 .scrolled .header {
@@ -866,7 +871,7 @@ section,
 
 .hero .carousel-item::before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 45%);
   position: absolute;
   inset: 0;
   z-index: 2;
