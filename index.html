@@ -108,15 +108,15 @@
         </div>
 
         <div class="carousel-item">
-          <img src="images/seattlelighter.jpg" alt="">
-        </div>
-
-        <div class="carousel-item">
-          <img src="images/mapbig.jpg" alt="">
+          <img src="images/seattle_air.png" alt="">
         </div>
 
         <div class="carousel-item">
           <img src="images/GovSigningbig.jpg" alt="">
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/mapbig.jpg" alt="">
         </div>
 
 
@@ -542,12 +542,12 @@
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
                 <h3>Defendant Name Cleaning</h3>
-                <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>We used string manipulation methods to clean and extract the first and last names of individual defendants</span></li>
-                </ul>
-                <p class="fst-italic">
-                  For these state profiles, we are only interested in analyzing evictions of individual households, not commercial evictions.
+                <p>
+                  String manipulation methods were used to clean and extract the first and last names of individual defendants
                 </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span> For these state profiles, we are only interested in analyzing evictions of individual households, not commercial evictions.</span></li>
+                </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
                 <img src="images/row_houses.jpg" alt="" class="img-fluid">
@@ -560,17 +560,19 @@
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
                 <h3>Demographic Estimation</h3>
                 <p class="fst-italic">
-                  **still editing 
-                  We estimated the race of each defendant with a valid human name using a Bayesian prediction model.
-
-                  Bayes’ rule to examine the racial likelihood of frequently occurring surnames within Census name data and the racial composition for each neighborhood (tract data) where the evicted defendant lived. Using these two pieces of information, we computed the predicted probability of each racial category (White, Black, Latine, Asian, or other) for any given individual.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Predicted number of evictions for each racial group</span></li>
+                  The race of each defendant was estimated with their name and Census data using a Bayesian prediction model.
+                  <ul>
+                    <li><span>Our model examines the racial likelihood of frequently occurring surnames within Census name data and the racial composition for each neighborhood to compute the predicted probability of each racial category (White, Black, Latine, Asian, or other) for any given individual.</span></li>
+                  </ul>
+                  <ul>
+                    <lil></span>This information was ued to:</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Predict number of evictions for each racial group</span></li>
                   <li><i class="bi bi-check2-all"></i> <span>Proportion of evictions filed against each racial group</span></li>
                   <li><i class="bi bi-check2-all"></i> <span>Number of evictions for each racial group</span></li>
                   <li><i class="bi bi-check2-all"></i> <span>Eviction rates by race, or the share of renters in each racial group</span></li>
-                </ul>
+                  </ul>
+                </p>
+                
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
                 <img src="assets/img/features-4.jpg" alt="" class="img-fluid">
@@ -582,14 +584,12 @@
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
                 <h3>Deduplication</h3>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
+                <p>
+                  There were some instances of rows in a dataset having identical name and address but different date, state, and case ID. Presumably, these cases do not represent multiple separate evictions, but a single case being entered into the court's system at different points in time.
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Tract-level data was deduplicated when valid defendant names and addresses were available, keeping the earliest row for each unique name and address</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Deduplication was generally not be done for county-level data because the datasets did not contain enough information</span></li>
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
