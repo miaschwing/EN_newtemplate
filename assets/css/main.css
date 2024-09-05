@@ -676,7 +676,7 @@ h6 {
 
 .page-title:before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 40%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 65%);
   position: absolute;
   inset: 0;
 }
@@ -871,7 +871,7 @@ section,
 
 .hero .carousel-item::before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 45%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 55%);
   position: absolute;
   inset: 0;
   z-index: 2;
