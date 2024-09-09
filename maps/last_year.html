@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!-- https://docs.mapbox.com/mapbox-gl-js/example/updating-choropleth/ -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Oregon Eviction Filings</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+</head>
+
+<body>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-family: 'Roboto';
+    }
+
+    h2 {
+        font-size: 18px;
+        font-family: 'Roboto';
+    }
+
+    .legend {
+        font-family: 'Roboto';
+        position: fixed;
+        border-radius: 10px;
+        /*        top: 10px;*/
+        left: 10px;
+        margin: 10px;
+        width: 120px;
+        background-color: #ffffff80;
+        padding: 10px 10px;
+        z-index: 1002;
+    }
+
+    .content {
+        margin-bottom: 20px;
+    }
+
+    .row {
+        height: 12px;
+        width: 100%;
+    }
+
+    .colors {
+        background: linear-gradient(to right,
+            #FFFFFF,
+            #fecc5c,
+            #fd8d3c,
+            #f03b20,
+            #51087e);
+        margin-bottom: 5px;
+    }
+
+    .label {
+        width: 30%;
+        display: inline-block;
+        text-align: center;
+        font-family: 'Roboto';
+    }
+
+    .full_screen {
+        font-family: 'Roboto';
+        position: fixed;
+        border-radius: 10px;
+        bottom: 12px;
+        right: 10px;
+        margin: 10px;
+        /*        width: 120px;*/
+        background-color: #ffffff80;
+        padding: 10px 10px;
+        z-index: 1002;
+    }
+
+    /* Legend details */
+    </style>
+    <!-- Load the `mapbox-gl-geocoder` plugin. -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+    <div id="map"></div>
+    <div id="county-legend" class="legend">
+        <h2>Yearly County Eviction Rate</h2>
+        <div class="row colors"></div>
+        <div class="row labels">
+            <div class="label">0%</div>
+            <div class="label"> </div>
+            <div class="label">6%</div>
+        </div>
+        <!-- Change date below as needed -->
+        <p>Apr 2023 to<br>Mar 2024</p>
+        <p><small><i>Zoom in for tracts</i></small></p>
+        <div id="co_pd">
+            <hr>
+            <p>Hover over a geography for details!</p>
+        </div>
+    </div>
+    <div id="tract-legend" class="legend" style="display: none">
+        <h2>Yearly Census Tract Eviction Rate</h2>
+        <div class="row colors"></div>
+        <div class="row labels">
+            <div class="label">0%</div>
+            <div class="label"> </div>
+            <div class="label">25%+</div>
+        </div>
+        <!-- Change date below as needed -->
+        <p>Apr 2023 to<br>Mar 2024</p>
+        <!-- <p><small><i>Zoom out for counties</i></small></p> -->
+        <div id="tr_pd">
+            <hr>
+            <p>Hover over a geography for details!<br></p>
+        </div>
+    </div>
+    <!-- Initialize Map -->
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZG9jdGhvbWFzIiwiYSI6ImNsbXZmNTRxNDBmZ3Qyc3BlemFvZXF3N2gifQ.EEid913CWvtHxErrI8T1dg';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/docthomas/clo28cold005t01rc58g966jk',
+        center: [-120.5, 44.2],
+        minZoom: 5,
+        zoom: 5.7
+    });
+    // Zoom at which it changes layers
+    const zoomThreshold = 7;
+
+    // BEGIN load wait
+    map.on('load', () => {
+
+        // Make pointer default
+        map.getCanvas().style.cursor = 'default';
+
+        // Hover fills info box
+        map.on('mousemove', (event) => {
+            const hoverit = map.queryRenderedFeatures(event.point, {
+                layers: ['county', 'tracts']
+            });
+            document.getElementById('co_pd').innerHTML = hoverit.length ?
+                `<hr><big><b>${hoverit[0].properties.county}</b></big>
+                <p><big><big>${hoverit[0].properties.yae_12}</big></big><small> average yearly rate</p>
+                <p>${hoverit[0].properties.filings_12} filings<br>${hoverit[0].properties.renters} renters<br>${hoverit[0].properties.pe_12} total eviction rate</p></small>` :
+                `<hr><p>Hover over a geography for details!</p>`;
+            document.getElementById('tr_pd').innerHTML = hoverit.length ?
+                `<hr><big><b>${hoverit[0].properties.county}</b></big>
+                <p><small>${hoverit[0].properties.tract_name}</small></p>
+                <p><big><big>${hoverit[0].properties.yae_12}</big></big><small> average yearly rate</p>
+                <p>${hoverit[0].properties.filings_12} filings<br>${hoverit[0].properties.renters} renters<br>${hoverit[0].properties.pe_12} total eviction rate</p></small>` :
+                `<hr><p>Hover over a geography for details!</p>`;
+        });
+        // Add custom tileset source. This tileset 
+        // RELIC: Add a custom vector tileset source. The tileset used in
+        // this example contains a feature for every state and
+        // county in the U.S.
+        // Each state contains four properties. For example:
+        //     {
+        //         isState: true,
+        //         name: "Wyoming",
+        //         population: 584153,
+        //         state: 56
+        //     }
+        // Each county contains four properties. For example:
+        //     {
+        //         county: 16049,
+        //         isCounty: true,
+        //         name: "Idaho County",
+        //         population: 16315
+        //     }
+
+        map.addSource('eviction_data', {
+            'type': 'vector',
+            'url': 'mapbox://docthomas.OR_evictions_v12' // change as needed
+        });
+
+        // County layer
+        map.addLayer({
+                'id': 'county',
+                'source': 'eviction_data',
+                'source-layer': 'eviction_layer', //change as needed
+                'maxzoom': zoomThreshold,
+                'type': 'fill',
+                // relic: only include features for which the "isState"
+                // property is "true"
+                'filter': ['==', 'isCounty', true],
+                'paint': {
+                    'fill-color': [
+                        'interpolate',
+                        ['linear'],
+                        ['get', 'yearly_avg_evr_12'],
+                        0, "#FFFFFF",
+                        3, "#fecc5c",
+                        4, "#fd8d3c",
+                        4.5, "#f03b20",
+                        5.5, "#51087e"
+                    ],
+                    // When NA, give it more opacity
+                    "fill-opacity": ["case", ["==", ["get", "yearly_avg_evr_12"], null], 0.1, 0.7]
+                }
+            },
+            'road-label-simple' // Add layer below labels
+        );
+        // Tract layer
+        map.addLayer({
+                'id': 'tracts',
+                'source': 'eviction_data',
+                'source-layer': 'eviction_layer', //change as needed
+                'minzoom': zoomThreshold,
+                'type': 'fill',
+                // only include features for which the "isCounty"
+                // property is "true"
+                'filter': ['==', 'isTract', true],
+                'paint': {
+                    'fill-color': [
+                        'interpolate',
+                        ['linear'],
+                        ['get', 'yearly_avg_evr_12'],
+                        0, "#FFFFFF",
+                        2, "#fecc5c",
+                        6, "#fd8d3c",
+                        12, "#f03b20",
+                        25, "#51087e"
+                    ],
+                    "fill-opacity": ["case", ["==", ["get", "yearly_avg_evr_12"], null], 0.1, 0.6]
+                }
+            },
+            'road-label-simple' // Add layer below labels
+        );
+    }); // End load wait
+
+    const countyLegendEl = document.getElementById('county-legend');
+    const tractLegendEl = document.getElementById('tract-legend');
+    map.on('zoom', () => {
+        if (map.getZoom() > zoomThreshold) {
+            countyLegendEl.style.display = 'none';
+            tractLegendEl.style.display = 'block';
+        } else {
+            countyLegendEl.style.display = 'block';
+            tractLegendEl.style.display = 'none';
+        }
+    });
+    // Add the control to the map.
+    map.addControl(
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+        }), 'top-right'
+    );
+    // Zoom levels    
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+    // Full screen option
+    map.addControl(new mapboxgl.FullscreenControl({ container: document.querySelector('body') }), 'bottom-right');
+    </script>
+</body>
+
+</html>
