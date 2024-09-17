@@ -458,7 +458,7 @@ h6 {
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
-  background: url("C:/Users/miasc/git/miaschwing/EN_newtemplate/images/buildings.png") top center no-repeat;
+  background: url("C:/Users/miasc/git/miaschwing/EN_newtemplate/images/seattle_air.png") center no-repeat;
   background-size: cover;
   font-size: 14px;
   position: relative;
@@ -470,7 +470,7 @@ h6 {
 
 .footer:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 20%);
+  background: color-mix(in srgb, var(--background-color), transparent 40%);
   position: absolute;
   inset: 0;
 }
