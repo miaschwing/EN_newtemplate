@@ -488,6 +488,7 @@ h6 {
 .footer .footer-about .logo img {
   max-height: 130px;
   margin-right: 10px;
+  margin-left: -15px;
 }
 
 .footer .footer-about .logo span {
