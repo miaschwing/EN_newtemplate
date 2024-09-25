@@ -99,81 +99,14 @@
       </div>
     </div><!-- End Page Title -->
     </div><!-- End Section Title -->
- 
-    <!-- Historical Average Plot -->
-
-    <section id="alt-services" class="alt-services section">
-      <div class="container">
-        <div class="col-12 justify-content-center">
-          <iframe src="maps/last_year.html" titlr="mapframe" height= "500" width = "1100" class = "image fit" data-external="1">
-            <!-- First map to show on the website -->
-          </iframe>
-          <span class="image fit">
-            <ul class="btn-get-started" id='map buttons'>
-                <li title="All Evictions map"><a href="maps/all.html" target="mapframe" class="btn-get-started">All</a></li>
-                <li title="Pre-Pandemic"><a href="maps/pre.html" target="mapframe" class="btn-get-started">Pre-Pandemic</a></li>
-                <li title="Pandemic map"><a href="maps/dur.html" target="mapframe" class="btn-get-started">Pandemic</a></li>
-                <li title="Post-Pandemic map"><a href="maps/post.html" target="mapframe" class="btn-get-started">Post-pandemic</a></li>
-                <li title="Post-Pandemic map"><a href="maps/last_year.html" target="mapframe" class="btn-get-started">Past 12 months</a></li>
-            </ul>
-          </span>
-          <script>
-            var header = document.getElementById("map buttons");
-            var btns = header.getElementsByClassName("button fit");
-            for (var i = 0; i < btns.length; i++) {
-                btns[i].addEventListener("click", function() {
-                    var current = header.getElementsByClassName("primary");
-                    if (current.length > 0) {
-                        current[0].className = current[0].className.replaceAll(" primary", "");
-                    }
-                    this.className += " primary";
-                });
-            }
-            </script>
-        
-          <div class="row justify-content-around gy-4">
-            <!-- original snippet -->
-            <!-- <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/alt-services.jpg"  alt=""></div> -->
-
-            <!-- begin datawrapper snippet -->
-            <div class="features-image col-lg-6">
-              <iframe title="" aria-label="Column Chart" id="datawrapper-chart-qRMuv" src="https://datawrapper.dwcdn.net/qRMuv/1/"  scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border:  #ffffff 15px solid" height="470" data-external="1">
-              </iframe>
-              <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data ["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e. length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-            </script>
-            </div>
-            <!-- end datawrapper snippet -->
-
-            <div class="col-lg-5 d-flex flex-column justify-content-center">
-              <h3>Washington State & County Eviction Trends</h3>
-              <p>Washington State's eviction filing count is 54% points higher in Feb. 2024 than it was in Feb. 2019. 
-              </p>
-              <ul>
-                <li><span>King County's filing count is 67% higher in Feb. 2024 than it was in Feb. 2019.</span></li>
-                <li><span>Spokane County has the most above-historical-average months.</span></li>
-              </ul>
-
-              <div class="icon-box d-flex position-relative">
-                <i class="bi bi-folder2"></i>
-                <div>
-                  <h4><a href="https://evictionresearch.net/washington/" class="stretched-link">Read 2020 Report</a></h4>
-                  <p>The State of Evictions: Results from the University of Washington Evictions Project</p>
-                </div>
-              </div><!-- End Icon Box -->
-
-            </div>
-        </div>
-        </div>
-
-    </section><!-- /Historical Average Plot -->
 
     <!-- Stats Counter Section -->
-    <section id="stats-counter" class="stats-counter section">
+    <section id="stats-counter" class="stats-counter section" style="padding:30px">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <!-- <div class="container section-title" data-aos="fade-up"> 
         <h2>Eviction Statistics</h2>
-      </div><!-- End Section Title -->
+      </div><!- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -227,7 +160,113 @@
 
       </div>
 
-    </section><!-- /Stats Counter Section -->
+    </section><!-- /Stats Counter Section --> 
+
+    <!-- Interactive Map -->
+
+    <div class = "container">
+      <div class="col-12 justify-content-center" style="padding-top:10px">
+          <iframe src="maps/last_year.html" titlr="mapframe" height= "500" width = "1120" class = "image fit" data-external="1">
+            <!-- First map to show on the website -->
+          </iframe>
+          <span class="image fit">
+            <ul class="btn-get-started" id='map buttons'>
+                <li title="All Evictions map"><a href="maps/all.html" target="mapframe" class="btn-get-started">All</a></li>
+                <li title="Pre-Pandemic"><a href="maps/pre.html" target="mapframe" class="btn-get-started">Pre-Pandemic</a></li>
+                <li title="Pandemic map"><a href="maps/dur.html" target="mapframe" class="btn-get-started">Pandemic</a></li>
+                <li title="Post-Pandemic map"><a href="maps/post.html" target="mapframe" class="btn-get-started">Post-pandemic</a></li>
+                <li title="Post-Pandemic map"><a href="maps/last_year.html" target="mapframe" class="btn-get-started">Past 12 months</a></li>
+            </ul>
+          </span>
+          <!-- script to toggle buttons from original oregon page -->
+          <script>
+            var header = document.getElementById("map buttons");
+            var btns = header.getElementsByClassName("button fit");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function() {
+                    var current = header.getElementsByClassName("primary");
+                    if (current.length > 0) {
+                        current[0].className = current[0].className.replaceAll(" primary", "");
+                    }
+                    this.className += " primary";
+                });
+            }
+            </script>
+      </div>
+    </div>
+    <!-- /Interactive Map -->
+
+    <section id="alt-services" class="alt-services section">
+      <div class="container">
+        
+          <div class="row justify-content-around gy-4">
+            <!-- original snippet -->
+            <!-- <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/alt-services.jpg"  alt=""></div> -->
+            <div class="featues-image col-lg-2" >
+              <img src="images/logos/Portland-State-University-Logo.png" alt="" style="width: 400px;">
+            
+            <div class="icon-box d-flex position-relative">
+              <i class="bi bi-folder2"></i>
+            
+            <div>
+                <h4><a href="https://evictionresearch.net/oregon/reports/Oregon_Racial_Disparities_Report_2024_q1.pdf" class="stretched-link">Read the Q1 2024 Report</a></h4>
+                <p>Racial Disparities in Oregon State Eviction Filings</p>
+              </div>
+            </div><!-- End Icon Box -->
+            </div>
+
+
+            <div class="col-lg-5 d-flex flex-column justify-content-top">
+              <h3>Summary of findings</h3>
+              <b><i>Eviction filing counts are now at the highest level they've ever been in Oregon's history, particfor Black renting households.</i></b><br>
+              Over the past 12 months:
+              <ul>
+                  <li>
+                      1 in 24 renting households experienced an eviction filing (4.2%)
+                  </li>
+                  <li>
+                      1 in 11 Black households (9.1%)
+                  </li>
+                  <li>
+                      1 in 19 Latine households (5.3%)
+                  </li>
+                  <li>
+                      1 in 31 “Other Group” (Asian, mixed-race, Indigenous, MENA, and other racial/ethnic groups) (3.2%) and
+                  </li>
+                  <li>
+                      1 in 26 White households (3.9%) experienced an eviction filing
+                  </li>
+              </ul>
+<!-- !!EDIT!! Location insights-->
+              <b><i>Evictions impact both urban and rural parts of Oregon.</i></b>
+              <ul>
+                  <li>
+<!-- !!EDIT!! Where are they higher? M-Note: in washington for the last 12 months but over the last 8 years Multnomah and Klamath are still the top two -->
+                      Multnomah, Crook, Washington, and Klamath Counties have the highest filing rates in the state.
+                  </li>
+                  <li>
+<!-- !!EDIT!! By How much? Calculated by look at percent change in the pancake plot-->
+                      Between the end of the CDC moratorium in June 2021 to the first post-moratoria peak of October<b><i>eviction filings increased by 533%</i></b> (300 to 1900 cases).
+                  </li>
+                  <li>
+<!-- !!EDIT!! How is it now?  -->
+                      The introduction of House Bill 2001 in April 2023 cut filings by 54%, but cases rapidly increa81% as of August 2023.
+                  </li>
+                  <li>
+<!-- !!EDIT!! How is it now?  -->
+                      Since August of 2022, Oregon has been evicting more renters on a monthly basis than it ever its history.
+                  </li>
+                   <li>
+<!-- !!EDIT!! How is it now?  -->
+                      March 2024 eviction counts were 70% above historical average, the highest record in the shistory.
+                  </li>
+              </ul>
+
+            </div>
+        </div>
+
+    </section><!-- /Historical Average Plot -->
+
 
     <!-- Testimonials Section  (ADD LATER ON WITH LONGER STATS/GRAPHS??)
     <section id="testimonials" class="testimonials section">
