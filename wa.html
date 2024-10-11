@@ -84,16 +84,21 @@
   <main class="main">
 
     <!-- Page Title -->
+    <!-- <div class="page-title dark-background" style="background-image: url(assets/img/page-title-bg.jpg);"> -->
+    <!-- <div class="page-title dark-background" style="background-image: url(assets/img/seattle_air.png);"> -->
+    <!-- <div class="page-title dark-background" style="background-image: url(assets/img/JNGQE9951.png);"> -->
     <div class="page-title-state dark-background" style="background-image: url(images/seattle_air.png);">
       <div class="container position-relative">
         <h1>Washington State</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li>Tim Thomas & Mia Schwinghammer | Oct. 10, 2024</li>
+            <!-- <li><a href="index.html">Home</a></li> -->
+            <li class="current">Tim Thomas & Mia Schwinghammer</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
+    </div><!-- End Section Title -->
 
     <!-- Stats Counter Section -->
     <section id="stats-counter" class="stats-counter section" style="padding:30px">
@@ -111,28 +116,27 @@
             <div class="stats-item d-flex align-items-center w-100 h-100">
               <i class="bi bi-people color-blue flex-shrink-0"></i>
               <div>
-                <h3>2.1%</h3>
+                <h3>1 in 55</h3>
                 <!-- <span data-purecounter-start="0" data-purecounter-end="55" data-purecounter-duration="1" class="purecounter"></span> -->
-                <p>state eviction rate</p>
-                <br>
+                <p>adults evicted 2013-2017</p>
               </div>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-arrow-up-short color-orange flex-shrink-0"></i>
+              <i class="bi bi-house color-orange flex-shrink-0"></i>
               <div>
-                <h3 style = "font-size: 22px;">Above historical average</h3>
+                <h3>Lost over 70,000</h3>
                 <!-- <span data-purecounter-start="0" data-purecounter-end="70000" data-purecounter-duration="1" class="purecounter"></span> -->
-                <p>since July 2023</p>
+                <p>affordable homes since 2012</p>
               </div>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-house color-green flex-shrink-0"></i>
+              <i class="bi bi-arrow-up-short color-green flex-shrink-0"></i>
               <div>
                 <!-- <span data-purecounter-start="0" data-purecounter-end="46" data-purecounter-duration="1" class="purecounter"></span> -->
                 <h3>46%</h3>
@@ -145,7 +149,7 @@
             <div class="stats-item d-flex align-items-center w-100 h-100">
               <i class="bi bi-person color-pink flex-shrink-0"></i>
               <div>
-                <h3 style = "font-size: 22px;">1 in 6</h3>
+                <h3>1 in 6</h3>
                 <!-- <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span> -->
                 <p>black adults evicted in Pierce County</p>
               </div>
@@ -159,123 +163,205 @@
     </section>
     <!-- /Stats Counter Section -->
      
-
-    <!-- Historical Average Bar Chart-->
-    <section id="alt-services" class="alt-services section" style="padding:30px">
-      <div class="container section-title">
-        <h2>Washington State & County Eviction Trends</h2>
+   <!-- Overview -->
+   <!-- <section id="alt-services" class="alt-services section"> 
+    <div class="container section-title">
+      <h2>Overview</h2>
+      <p>Washington Evictions Are:</p>
+      <div class="col-lg-3 flex-column">
+        <p>Pervasive
+          Between 2013 and 2017, 1 in 55 Washingtonian adults had an eviction (130,203 adults which equals 1.8% of the State’s adult population)
+          Between 2004 and 2017, 397,697 adults have received a formal eviction.</p>
       </div>
-      <div class="container">
-        <div class="row justify-content-around gy-4">
+      <div class="col-lg-5">
+        <p>A Civil Rights Issue
+          Black adults are over-represented in the eviction process when their group’s population consists of at least 5% of the county’s total population.
+          In Pierce County, 1 in 6 black adults has had an eviction between 2013 and 2017. In King County, 1 in 11 black adults has had an eviction in King County over the same time period. For white adults, 1 in 50 in Pierce County and 1 in 100 in King were evicted.
+          Women are evicted more than men across the state.</p>
+      </div>
+      <div class="col-lg-5">
 
-          <!--  datawrapper snippet for first graph -->
+      </div>
+      
+    </div>
+     /Overview --> 
+    <!-- Historical Average Plot -->
+    <section id="alt-services" class="alt-services section" style="padding:30px">
+
+      <div class="container">
+
+        <div class="row justify-content-around gy-4">
+          <!-- original snippet -->
+          <!-- <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/alt-services.jpg" alt=""></div> -->
+
+          <!-- begin datawrapper snippet -->
           <div class="features-image col-lg-6">
             <iframe title="" aria-label="Column Chart" id="datawrapper-chart-qRMuv" src="https://datawrapper.dwcdn.net/qRMuv/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="470" data-external="1">
             </iframe>
             <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
           </script>
           </div>
-          <!-- /second graph -->
+          <!-- end datawrapper snippet -->
 
-          <!-- description of first graph -->
-          <div class="col-lg-6 d-flex flex-column justify-content-center">
-            <p><b>Washington State's eviction filing count is 54% higher in Feb. 2024 than it was in Feb. 2019. 
-            </b></p>
+          <div class="col-lg-5 d-flex flex-column justify-content-top">
+            <h3>Washington State & County Eviction Trends</h3>
+            <p>Washington State's eviction filing count is 54% higher in Feb. 2024 than it was in Feb. 2019. 
+            </p>
             <ul>
               <li><span>King County's filing count is 67% higher in Feb. 2024 than it was in Feb. 2019.</span></li>
               <li><span>Spokane County has the most above-historical-average months.</span></li>
             </ul>
-            </div>
-            <!-- /description of first graph -->
-        </div>
-        <br><br>
-        <div class="container">
-          <div class="row justify-content-around gy-4">
-          <!-- description of second graph -->
-          <div class="col-lg-5 d-flex flex-column justify-content-center">
-            <p><b>Washington State's eviction filing count has been above the historical average since July 2023. 
-            </b></p>
-            <p> Out of the last 10 months, 3 months had over 2,000 state wide eveictions. 
-            </p>
-            <ul>
-              <li><span>King County's filing count has been over 400 per month since July 2023.</span></li>
-            </ul>
-          </div>
-          <!-- /description of second graph -->
-          <!-- datawrapper snippet for second graph-->
-          <div class="features-image col-lg-6">
-            <iframe title="Washington State Eviction Filings by County" aria-label="Interactive area chart" id="datawrapper-chart-nFqso" src="https://datawrapper.dwcdn.net/nFqso/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="470" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-              </script>
-          </div> 
-          <!-- /second graph -->
-          </div>
+
+            <div class="icon-box d-flex position-relative">
+              <i class="bi bi-folder2"></i>
+              <div>
+                <h4><a href="https://evictionresearch.net/washington/" class="stretched-link">Read 2020 Report</a></h4>
+                <p>The State of Evictions: Results from the University of Washington Evictions Project</p>
+              </div>
+            </div><!-- End Icon Box -->
 
           </div>
-        </div> 
-      <br>
-
-      <!-- Table  -->
-      <br>
-      <div class="container">
-        <div class="row justify-content-center gy-4">
-          <iframe title="Washington County Eviction Filings in the Past 12 months (Sept. 2023 to Aug. 2024) " aria-label="Table" id="datawrapper-chart-hqS4c" src="https://datawrapper.dwcdn.net/hqS4c/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="538" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-          </script>
         </div>
-      </div>
-      <br>
-      <!-- /Table -->
+
     </section><!-- /Historical Average Plot -->
 
-      <!-- Maps section -->
-      <section id="alt-services" class="alt-services section" style="padding:30px">
-        <div class="container section-title">
-          <h2>Washington State Eviction Maps</h2>
-          <br>
-        </div>
-        <div class="container"  style="column-count: 2;">
-          <iframe title="Washington State Eviction Filing Count" aria-label="Map" id="datawrapper-chart-Oa2mA" src="https://datawrapper.dwcdn.net/Oa2mA/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none; padding-right:65px" height="525" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-          </script>
-          <br><br>
-          <b>
-          Counties that evicted 2,000+ people in the last 12 months:
-          </b>
-          <p>
-            <ul>
-              <li><span>King (Seattle)</span></li>
-              <li><span>Pierce (Tacoma)<span></li>
-              <li><span>Spokane </span></li>
-              <li><span>Clark (Vancouver) </span></li>
-              <li><span>Snohomish</span></li>
-            </ul> 
-          </p>
-            
-          <!-- begin datawrapper snippet -->
-          <iframe title="Washington State Eviction Filing Rate" aria-label="Map" id="datawrapper-chart-ge8x2" src="https://datawrapper.dwcdn.net/ge8x2/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;padding-left:35px" height="528" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-          </script>
-          <br><br>
-            <b>
-              Counties with top filling rates and counts:
-            </b>
-              <p>
-                <ul>
-                  <li><span> Clark (Vancouver) - 2,100 evictions,  3.4% eviction rate</span></li>
-                  <li><span>Pierce (Tacoma) - 3,500 evictions, 2.9% eviction rate</span></li>
-                  <li><span>Spokane - 2,200 evictions, 2.9% eviction rate</span></li>
-                </ul> 
-              </p>
-            
-        </div>
-        <div class="icon-box d-flex position-relative" style="padding-left:350px;">
-          <i class="bi bi-folder2"></i>
-          <div>
-            <h4><a href="https://evictionresearch.net/washington/" class="stretched-link">Read 2020 Report</a></h4>
-            <p>The State of Evictions: Results from the University of Washington Evictions Project</p>
-          </div>
-        </div><!-- End Icon Box -->
-      </section>
-      <br>
-      <!-- Maps section -->
 
+    <!-- Testimonials Section  (ADD LATER ON WITH LONGER STATS/GRAPHS??)
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title 
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Stats</h2>
+        <p>Provides more space for stats/graphs</p>
+      </div><!-- End Section Title 
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item 
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item 
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item 
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item 
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item 
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section --> 
 
   </main>
 
