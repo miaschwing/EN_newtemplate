@@ -34,7 +34,7 @@
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #feb900; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #ee3029; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -181,6 +181,7 @@ h6 {
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Global Header on Scroll
 ------------------------------*/
@@ -686,7 +687,7 @@ h6 {
   padding: 90px 0 60px 0;
   text-align: center;
   position: relative;
-  height: 240px; 
+  height: 25%; 
 }
 
 .page-title:before {
@@ -753,6 +754,15 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
+@media (max-width: 1199px) {
+  .page-title-state h1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+}
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
@@ -807,6 +817,22 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+}
+
+@media (max-width: 1199px) {
+  .section-title h2 {
+    font-size: 33px;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-underline-offset: 6px;
+  }
+
+  .section-title h2:before,
+  .section-title h2:after {
+  display: none;
+  
+}
+
 }
 
 /*--------------------------------------------------------------
@@ -1208,6 +1234,12 @@ section,
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .alt-services h3 {
+    font-size: 25px;
+  }
 }
 
 .alt-services h3:after {
@@ -1783,6 +1815,7 @@ section,
   font-size: 42px;
   line-height: 0;
   margin-right: 20px;
+  width: 25%
 }
 
 .stats-counter .stats-item span {
@@ -1797,6 +1830,37 @@ section,
   margin: 0;
   font-family: var(--heading-font);
   font-size: 16px;
+}
+
+.stats-counter .stats-item h3 {
+  font-size: 150%;
+}
+
+@media (max-width: 1024px) {
+  .stats-counter .stats-item {
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .stats-counter .stats-item i {
+    color: var(--accent-color);
+    font-size: 30px;
+    line-height: 0;
+    margin-right: 3px;
+  }
+
+  .stats-counter .stats-item h3 {
+    font-size: 130%;
+  }
+
+  .stats-counter .stats-item p {
+    font-size: 100%;
+  }
+
+  .stats-counter .col-lg-3 {
+    width: 50%;
+  }
+
 }
 
 /*--------------------------------------------------------------
