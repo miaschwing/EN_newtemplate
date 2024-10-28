@@ -1024,10 +1024,6 @@ section,
   bottom: 0;
 }
 
-.get-started .content p {
-  font-size: 14px;
-}
-
 .get-started .php-email-form {
   background: color-mix(in srgb, var(--default-color), transparent 97%);
   padding: 30px;
