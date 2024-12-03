@@ -680,7 +680,7 @@ h6 {
 
 .page-title-state {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--background-color); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
