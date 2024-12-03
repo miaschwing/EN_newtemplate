@@ -1126,7 +1126,7 @@ section,
 }
 
 .constructions .card-item .card-bg {
-  min-height: 250px;
+  min-height: 150px;
   position: relative;
 }
 
@@ -1169,7 +1169,7 @@ section,
 
 .constructions .features-image {
   position: relative;
-  min-height: 400px;
+  min-height: 100px;
   padding-bottom: 30px;
 }
 
