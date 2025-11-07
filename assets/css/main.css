@@ -1184,6 +1184,51 @@ section,
   z-index: 1;
 }
 
+/* Compact intro text at top-left of State Eviction Maps & Profiles */
+.constructions .state-intro-compact {
+  text-align: left;
+  max-width: 420px;
+  padding-left: 0;
+}
+
+.constructions .state-intro-compact h3 {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+
+.constructions .state-intro-compact p {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive iframe map sizing */
+.constructions .map-embed {
+  width: 100%;
+  height: 520px;
+  border: 0;
+}
+
+@media (max-width: 1199px) {
+  .constructions .map-embed {
+    height: 460px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Stack under text automatically via Bootstrap; ensure adequate height */
+  .constructions .map-embed {
+    height: 420px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .constructions .map-embed {
+    height: 360px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Services Section
