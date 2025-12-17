@@ -1189,17 +1189,20 @@ section,
   text-align: left;
   max-width: 420px;
   padding-left: 0;
+  align-self: center;
 }
 
 .constructions .state-intro-compact h3 {
-  margin-bottom: 12px;
+  margin-bottom: 1.5rem;
   padding-bottom: 12px;
+  margin-top: 0;
 }
 
 .constructions .state-intro-compact p {
   font-size: 0.95rem;
   line-height: 1.35;
   margin-bottom: 0.5rem;
+  margin-top: 0;
 }
 
 /* Responsive iframe map sizing */
