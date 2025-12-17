@@ -1189,13 +1189,21 @@ section,
   text-align: left;
   max-width: 420px;
   padding-left: 0;
-  align-self: center;
+  align-self: flex-start;
 }
 
 .constructions .state-intro-compact h3 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   padding-bottom: 12px;
   margin-top: 0;
+}
+
+.constructions .state-intro-compact .state-intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin-top: 1.5rem;
 }
 
 .constructions .state-intro-compact p {
