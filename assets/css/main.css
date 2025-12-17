@@ -1229,52 +1229,6 @@ section,
   }
 }
 
-<<<<<<< Updated upstream
-=======
-/* add the map container and overlay styles*/
-.constructions .map-container {
-  position: relative;
-  width: 100%;
-}
-
-.constructions .map-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  pointer-events: none;
-}
-
-.constructions .map-overlay p {
-  color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 500;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.constructions .map-container:hover .map-overlay {
-  opacity: 0;
-  visibility: hidden;
-}
-
-@media (max-width: 575px) {
-  .constructions .map-overlay p {
-    font-size: 1rem;
-    padding: 15px;
-  }
-}
-
->>>>>>> Stashed changes
 
 /*--------------------------------------------------------------
 # Services Section
