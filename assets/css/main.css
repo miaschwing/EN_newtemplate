@@ -1936,7 +1936,7 @@ section,
 
 @media (min-width: 991px) {
   .about .our-story {
-    padding-right: 35%;
+    padding-right: 40px;
   }
 }
 
@@ -2015,6 +2015,22 @@ section,
   object-fit: cover;
   object-position: center;
   z-index: 1;
+}
+
+.about .about-img-float {
+  float: right;
+  width: 45%;
+  margin: 0 0 20px 25px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+  .about .about-img-float {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
 }
 
 /*--------------------------------------------------------------
