@@ -27,6 +27,16 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /* post-item cards shouldn’t show any outline */
+    .recent-blog-posts .post-img img {
+      border: none !important;
+    }
+    /* portfolio items get a consistent black border instead */
+    .portfolio-item img {
+      border: 2px solid #000 !important;
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: UpConstruction
@@ -107,27 +117,15 @@
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-report">Reports</li>
-            <li data-filter=".filter-construction">Studies</li>
-            <li data-filter=".filter-repairs">News</li>
+            <li data-filter=".filter-study">Studies</li>
+            <li data-filter=".filter-news">News</li>
             <!-- <li data-filter=".filter-design">Design</li> -->
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <!-- Post Item Format -->
 
-#item1
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
-              <div class="portfolio-content h-100">
-                <img src="images/National_data_report.PNG" class="img-fluid" alt="" style="border: #000000 2px outset">
-                <div class="portfolio-info">
-                  <h4>Report</h4>
-                  <p><u>Explains the improvement of eviction data collection through the implementation of Natural Language Processing (NLP) to convert court records to more utilizable format</u><br></p>
-                  <a href="images/National_data_report.PNG" title="Toward a National Eviction Data Collection Strategy Using Natural Language Processing | 2024" data-gallery="portfolio-gallery-report" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://www.huduser.gov/portal/periodicals/cityscape/vol26num1/ch12.pdf" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
+            <!-- #item1 -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-report recent-blog-posts">
               <div class="post-item position-relative h-100">
                 
@@ -162,75 +160,119 @@
 
             </div><!-- End Post Item -->
 
-#item2
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
-              <div class="portfolio-content h-100">
-                <img src="images/portland_study.PNG" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Study</h4>
+            <!-- #item2 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-study recent-blog-posts">
+              <div class="post-item position-relative h-100">
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="images/portland_study.PNG" class="img-fluid" alt="">
+                  <span class="post-date">2024</span>
+                </div>
+                <div class="post-content d-flex flex-column">
+                  <h3 class="post-title"></h3>
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-person"></i> <span class="ps-2"></span>
+                    </div>
+                    <span class="px-3 text-black-50">/</span>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">Studies</span>
+                    </div>
+                  </div>
+                  <br>
                   <p>Targeted, Harassed, and Displaced: The Role of Discrimination in Oregon Evictions</p>
-                  <a href="images/portland_study.PNG" title="Targeted, Harassed, and Displaced: The Role of
-                  Discrimination in Oregon Evictions | 2024" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=1387&context=usp_fac" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <hr>
+                  <a href="https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=1387&context=usp_fac" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div><!-- End Post Item -->
 
-#item3
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
-              <div class="portfolio-content h-100">
-                <img src="images/Indiana_news.PNG" class="img-fluid" alt="" style="border: #df1529 2px outset">
-                <div class="portfolio-info">
-                  <h4>News</h4>
+            <!-- #item3 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-news recent-blog-posts">
+              <div class="post-item position-relative h-100">
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="images/Indiana_news.PNG" class="img-fluid" alt="">
+                  <span class="post-date">Oct 2022</span>
+                </div>
+                <div class="post-content d-flex flex-column">
+                  <h3 class="post-title"></h3>
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-person"></i> <span class="ps-2"></span>
+                    </div>
+                    <span class="px-3 text-black-50">/</span>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">News</span>
+                    </div>
+                  </div>
+                  <br>
                   <p>WFYI: Indiana Eviction Rates</p>
-                  <a href="images/Indiana_news.PNG" title="Indiana Had One of the Highest Eviction Rates in the Country Before and During the Pandemic | October 2022" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://www.wfyi.org/news/articles/indiana-had-one-of-the-highest-eviction-rates-in-the-country-before-and-during-the-pandemic-accordi" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <hr>
+                  <a href="https://www.wfyi.org/news/articles/indiana-had-one-of-the-highest-eviction-rates-in-the-country-before-and-during-the-pandemic-accordi" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div><!-- End Post Item -->
 
-#item5
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
-              <div class="portfolio-content h-100">
-                <img src="images/UW_evictions_proj.PNG" class="img-fluid" alt="" style="border: #000000 2px outset">
-                <div class="portfolio-info">
-                  <h4>Report</h4>
+            <!-- #item4 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling recent-blog-posts">
+              <div class="post-item position-relative h-100">
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="images/UW_evictions_proj.PNG" class="img-fluid" alt="" style="border: #000000 2px outset">
+                  <span class="post-date">2024</span>
+                </div>
+                <div class="post-content d-flex flex-column">
+                  <h3 class="post-title"></h3>
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-person"></i> <span class="ps-2"></span>
+                    </div>
+                    <span class="px-3 text-black-50">/</span>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">Reports</span>
+                    </div>
+                  </div>
+                  <br>
                   <p>The State of Evictions: University of Washington</p>
-                  <a href="images/UW_evictions_proj.PNG" title="The State of Evictions: Results from the University of Washington Evictions Project | 2020" data-gallery="portfolio-gallery-report" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://evictionresearch.net/washington" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <hr>
+                  <a href="https://evictionresearch.net/washington" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div><!-- End Post Item -->
 
-#item7
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
-              <div class="portfolio-content h-100">
-                <img src="images/npr_news.PNG" class="img-fluid" alt="" style="border: #df1529 2px outset">
-                <div class="portfolio-info">
-                  <h4>News</h4>
+            <!-- #item5 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-news recent-blog-posts">
+              <div class="post-item position-relative h-100">
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="images/npr_news.PNG" class="img-fluid" alt="" style="border: #df1529 2px outset">
+                  <span class="post-date">Dec 2022</span>
+                </div>
+                <div class="post-content d-flex flex-column">
+                  <h3 class="post-title"></h3>
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-person"></i> <span class="ps-2"></span>
+                    </div>
+                    <span class="px-3 text-black-50">/</span>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">News</span>
+                    </div>
+                  </div>
+                  <br>
                   <p>NPR: Los Angeles Evictions</p>
-                  <a href="images/npr_news.PNG" title="'Flood of Evictions' Looms in Los Angeles as Pandemic Tenant Protections Expire | December 2022" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://www.npr.org/2022/12/03/1140078409/flood-of-evictions-looms-in-los-angeles-as-pandemic-tenant-protections-expire" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <hr>
+                  <a href="https://www.npr.org/2022/12/03/1140078409/flood-of-evictions-looms-in-los-angeles-as-pandemic-tenant-protections-expire" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div><!-- End Post Item -->
 
+            <!-- #item6 -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-report recent-blog-posts">
               <div class="post-item position-relative h-100">
-                
                 <div class="post-img position-relative overflow-hidden">
                   <img src="images/Oregon_2024_report.PNG" class="img-fluid" alt="">
                   <span class="post-date">May 2024</span>
                 </div>
-                
                 <div class="post-content d-flex flex-column">
-
                   <h3 class="post-title"></h3>
-
                   <div class="meta d-flex align-items-center">
                     <div class="d-flex align-items-center">
                       <i class="bi bi-person"></i> <span class="ps-2">Tim Thomas & <br> Hannah Moore</span>
@@ -242,28 +284,37 @@
                   </div>
                   <br>
                   <p>Explores recent eviction trends in Oregon</p>
-
                   <hr>
-
                   <a href="https://evictionresearch.net/oregon/reports/Oregon_Racial_Disparities_Report_2024_q1.pdf" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-              
                 </div>
-
               </div>
-
             </div><!-- End Post Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
-              <div class="portfolio-content h-100">
-                <img src="images/washington_news.PNG" class="img-fluid" alt="" style="border: #df1529 2px outset">
-                <div class="portfolio-info">
-                  <h4>News</h4>
+            <!-- #item7 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-news recent-blog-posts">
+              <div class="post-item position-relative h-100">
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="images/washington_news.PNG" class="img-fluid" alt="">
+                  <span class="post-date">Jun 2020</span>
+                </div>
+                <div class="post-content d-flex flex-column">
+                  <h3 class="post-title"></h3>
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-person"></i> <span class="ps-2"></span>
+                    </div>
+                    <span class="px-3 text-black-50">/</span>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">News</span>
+                    </div>
+                  </div>
+                  <br>
                   <p>University of Washington: Uneven Evictions</p>
-                  <a href="images/washington_news.PNG" title="Uneven Evictions | June 2020" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://magazine.washington.edu/feature/uneven-evictions/" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <hr>
+                  <a href="https://magazine.washington.edu/feature/uneven-evictions/" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div><!-- End Post Item -->
 
           </div><!-- End Portfolio Container -->
 
