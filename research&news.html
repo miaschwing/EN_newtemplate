@@ -63,6 +63,15 @@
       background-color: transparent;
       cursor: pointer;
     }
+
+    .post-item.video-link-card .readmore {
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      transition: 0.3s;
+    }
+
+    .post-item.video-link-card:hover .readmore {
+      color: var(--accent-color);
+    }
   </style>
 
   <!-- =======================================================
@@ -230,7 +239,7 @@
                     </div>
                   </div>
                   <br>
-                  <p>Possible Description HERE</p>
+                  <p>Uses Large Language Models to extract and understand the reasons for eviction based on tennant testimonies.</p>
                   <hr>
                   <a href="https://ideas.repec.org/p/osf/osfxxx/uscxh_v1.html" class="readmore stretched-link" target="_blank"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
@@ -258,7 +267,7 @@
                     </div>
                   </div>
                   <br>
-                  <p>Possible Description HERE</p>
+                  <p>Examines the relationship of housing instability and intimate partner violence, suggesting housing instability is a key risk factor rather than consequence of abuse.</p>
                   <hr>
                   <a href="https://www.mdpi.com/1660-4601/22/8/1212" class="readmore stretched-link" target="_blank"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
@@ -286,7 +295,7 @@
                     </div>
                   </div>
                   <br>
-                  <p>Possible Description HERE</p>
+                  <p>County wide report on displacement in Marin County, California.</p>
                   <hr>
                   <a href="https://www.rootedinmarin.org" class="readmore stretched-link" target="_blank"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
@@ -295,7 +304,7 @@
 
             <!-- #item6 -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-news recent-blog-posts">
-              <div class="post-item position-relative h-100">
+              <div class="post-item position-relative h-100 video-link-card">
                 <div class="post-content d-flex flex-column">
                   <h3 class="post-title">Evicting the American Dream</h3>
                 </div>
@@ -316,7 +325,7 @@
                 <div class="post-content d-flex flex-column">
                   <div class="meta d-flex align-items-center">
                     <div class="d-flex align-items-center">
-                      <i class="bi bi-person"></i> <span class="ps-2"> </span>
+                      <i class="bi bi-person"></i> <span class="ps-2">David Barnhart, <br>Counter Stories Productions</span>
                     </div>
                     <span class="px-3 text-black-50">/</span>
                     <div class="d-flex align-items-center">
@@ -324,10 +333,8 @@
                     </div>
                   </div>
                   <br>
-                  <p>Possible Description HERE</p>
+                  <p>A film examining the structural causes and possible prevention of housing insecurtiy and homelessness through a humanizing lens.</p>
                   <hr>
-                  <a href="https://vimeo.com/1061006434" class="readmore" target="_blank"><span>Trailer</span><i class="bi bi-arrow-right"></i></a>
-                  <br>
                   <a href="https://www.amazon.com/Evicting-American-Dream-David-Barnhart/dp/B0FSKZFKDT" class="readmore" target="_blank"><span>Watch Here</span><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
@@ -354,7 +361,7 @@
                     </div>
                   </div>
                   <br>
-                  <p>Possible Description HERE</p>
+                  <p>Uses machine learning and Chat GPT to analyze tennant forums and find core sources of tennant-landlord conflict. Also explores how external conditions, such as the COVID-19 pandemic, shape housing tensions.</p>
                   <hr>
                   <a href="https://link.springer.com/article/10.1007/s42001-025-00378-8" class="readmore stretched-link" target="_blank"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
@@ -382,7 +389,7 @@
                     </div>
                   </div>
                   <br>
-                  <p>Possible Description HERE.</p>
+                  <p>Analysis of Washington state evictions by county.</p>
                   <hr>
                   <a href="https://evictionresearch.net/washington" class="readmore stretched-link" target="_blank"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
@@ -410,7 +417,7 @@
                     </div>
                   </div>
                   <br>
-                  <p>Description: Explains the improvement of eviction data collection through the implementation of Natural Language Processing (NLP) to convert court records to more utilizable format</p>
+                  <p>Explains the improvement of eviction data collection through the implementation of Natural Language Processing (NLP) to convert court records to more utilizable format.</p>
                   <hr>
                   <a href="https://www.huduser.gov/portal/periodicals/cityscape/vol26num1/ch12.pdf" class="readmore stretched-link" target="_blank"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
@@ -822,7 +829,7 @@
                 <div class="post-content d-flex flex-column">
                   <div class="meta d-flex align-items-center">
                     <div class="d-flex align-items-center">
-                      <i class="bi bi-person"></i> <span class="ps-2">Xin Chen, <br>Julia Greenberg, <br>Hannah Moore, <br> Cohen, <br> Timothy A. Thomas</span>
+                      <i class="bi bi-person"></i> <span class="ps-2">Xin Chen, <br>Julia Greenberg, <br>Hannah Moore, <br>Amit Cohen, <br> Timothy A. Thomas</span>
                     </div>
                     <span class="px-3 text-black-50">/</span>
                     <div class="d-flex align-items-center">
@@ -838,6 +845,34 @@
             </div><!-- End Post Item -->
 
             <!-- #item25 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-news recent-blog-posts">
+              <div class="post-item position-relative h-100">
+                <div class="post-content d-flex flex-column">
+                  <h3 class="post-title">Facing Eviction with KQED's "SOLD OUT" Podcast</h3>
+                </div>
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="images/research&news/kqed_soldout.png" class="img-fluid" alt="" style="border: #df1529 2px outset">
+                  <span class="post-date">2021</span> <!-- Nov 2021 -->
+                </div>
+                <div class="post-content d-flex flex-column">
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-person"></i> <span class="ps-2">Erin Baldassari, <br>Molly Solomon</span>
+                    </div>
+                    <span class="px-3 text-black-50">/</span>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">News</span>
+                    </div>
+                  </div>
+                  <br>
+                  <p>Possible Description HERE</p>
+                  <hr>
+                  <a href="https://www.youtube.com/watch?v=NIwODvf3NkQ" class="readmore stretched-link" target="_blank"><span>Watch Here</span><i class="bi bi-arrow-right"></i></a>
+                </div> 
+              </div>
+            </div><!-- End Post Item -->
+
+            <!-- #item26 -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-reports recent-blog-posts">
               <div class="post-item position-relative h-100">
                 <div class="post-content d-flex flex-column">
@@ -917,6 +952,34 @@
                   <p>University of Washington Magazine: Uneven Evictions</p>
                   <hr>
                   <a href="https://magazine.washington.edu/feature/uneven-evictions/" class="readmore stretched-link" target="_blank"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div><!-- End Post Item -->
+
+            <!-- #item27 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-reports recent-blog-posts">
+              <div class="post-item position-relative h-100">
+                <div class="post-content d-flex flex-column">
+                  <h3 class="post-title">The Urban Displacement Replication Project</h3>
+                </div>
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="images/research&news/urban_displacement_rep.webp" class="img-fluid" alt="">
+                  <span class="post-date">2020</span> <!-- Jun 2020 -->
+                </div>
+                <div class="post-content d-flex flex-column">
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-person"></i> <span class="ps-2">Tim Thomas, <br>Carson Hartmann, <br>Anna Driscoll,<br>Karen Chapple, et al.</span> 
+                    </div>
+                    <span class="px-3 text-black-50">/</span>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">Report</span>
+                    </div>
+                  </div>
+                  <br>
+                  <p>Description HERE</p>
+                  <hr>
+                  <a href="https://www.urbandisplacement.org/wp-content/uploads/2021/07/udp_replication_project_methodology_10.16.2020-converted.pdf" class="readmore stretched-link" target="_blank"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div><!-- End Post Item -->
@@ -1001,6 +1064,34 @@
                   <p>Possible Description HERE</p>
                   <hr>
                   <a href="https://evictionresearch.net/washington/report/State_of_Evictions_2020/" class="readmore stretched-link" target="_blank"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div><!-- End Post Item -->
+
+            <!-- #item30 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-reports recent-blog-posts">
+              <div class="post-item position-relative h-100">
+                <div class="post-content d-flex flex-column">
+                  <h3 class="post-title">Review of Hate Crime Prevention, Response, and Reporting in Seattle: Phase 2 Report</h3>
+                </div>
+                <div class="post-img position-relative overflow-hidden">
+                  <img src="images/research&news/sea_hatecrimes.png" class="img-fluid" alt="" style="border: #000000 2px outset">
+                  <span class="post-date">2019</span>
+                </div>
+                <div class="post-content d-flex flex-column">
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-person"></i> <span class="ps-2">Melissa Alderson, <br>Claudia Gross-Shader, <br>Jane Dunkel, <br>David G. Jones</span>
+                    </div>
+                    <span class="px-3 text-black-50">/</span>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i> <span class="ps-2">Report</span>
+                    </div>
+                  </div>
+                  <br>
+                  <p>Possible Description HERE</p>
+                  <hr>
+                  <a href="https://www.seattle.gov/documents/Departments/CityAuditor/auditreports/2017-09%20Hate%20Crimes%20Ph2_Final.pdf" class="readmore stretched-link" target="_blank"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div><!-- End Post Item -->
@@ -1163,6 +1254,17 @@
         player.on('play', hideOverlay);
         player.on('pause', showOverlay);
         player.on('ended', showOverlay);
+      });
+
+      document.querySelectorAll('.post-item.video-link-card').forEach(function(card) {
+        card.addEventListener('click', function(event) {
+          if (event.target.closest('.post-img')) return;
+          if (event.target.closest('a')) return;
+          var readmore = card.querySelector('a.readmore');
+          if (readmore) {
+            readmore.click();
+          }
+        });
       });
     });
   </script>
