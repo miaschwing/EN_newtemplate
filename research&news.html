@@ -36,6 +36,33 @@
     .portfolio-item img {
       border: 2px solid #000 !important;
     }
+
+    /* overlay year on video cards */
+    .post-img.video-overlay {
+      position: relative;
+    }
+    .post-img.video-overlay .post-date {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      text-transform: uppercase;
+      font-size: 13px;
+      padding: 6px 12px;
+      font-weight: 500;
+      z-index: 4;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .post-img.video-overlay .video-click-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background-color: transparent;
+      cursor: pointer;
+    }
   </style>
 
   <!-- =======================================================
@@ -265,13 +292,14 @@
                 </div>
               </div>
             </div><!-- End Post Item -->
+
             <!-- #item6 -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-news recent-blog-posts">
               <div class="post-item position-relative h-100">
                 <div class="post-content d-flex flex-column">
                   <h3 class="post-title">Evicting the American Dream</h3>
                 </div>
-                <div class="post-img position-relative overflow-hidden">
+                <div class="post-img position-relative overflow-hidden video-overlay">
                   <div class="ratio ratio-16x9">
                     <iframe
                         src="https://player.vimeo.com/video/1061006434"
@@ -282,8 +310,9 @@
                         loading="lazy">
                       </iframe>
                   </div>
-                </div>
+                  <div class="video-click-overlay" aria-label="Click to reveal controls"></div>
                   <span class="post-date">2025</span> <!-- Mar 2025 -->
+                </div>
                 <div class="post-content d-flex flex-column">
                   <div class="meta d-flex align-items-center">
                     <div class="d-flex align-items-center">
@@ -1098,9 +1127,45 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.post-img.video-overlay').forEach(function(videoCard) {
+        var iframe = videoCard.querySelector('iframe');
+        var overlay = videoCard.querySelector('.video-click-overlay');
+        var postDate = videoCard.querySelector('.post-date');
+        if (!iframe || !overlay || !postDate) return;
+
+        var player = new Vimeo.Player(iframe);
+
+        var hideOverlay = function() {
+          postDate.style.display = 'none';
+          overlay.style.display = 'none';
+          overlay.style.pointerEvents = 'none';
+        };
+
+        var showOverlay = function() {
+          postDate.style.display = '';
+          overlay.style.display = 'block';
+          overlay.style.pointerEvents = 'auto';
+        };
+
+        overlay.addEventListener('click', function() {
+          hideOverlay();
+          player.play().catch(function() {
+            // ignore autoplay restrictions
+          });
+        });
+
+        player.on('play', hideOverlay);
+        player.on('pause', showOverlay);
+        player.on('ended', showOverlay);
+      });
+    });
+  </script>
 
 </body>
 
