@@ -37,6 +37,17 @@
       min-height: 240px;
       max-height: 240px;
     }
+    .recent-blog-posts .post-img.post-img-white {
+      box-sizing: border-box;
+      padding: var(--img-padding, 20px);
+      background: #fff;
+    }
+    .recent-blog-posts .post-img.post-img-white img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
     .recent-blog-posts .post-img img {
       width: 100%;
       height: 100%;
@@ -52,7 +63,20 @@
     .post-img.video-overlay {
       position: relative;
     }
+    .post-img.video-overlay.video-with-border {
+      box-sizing: border-box;
+      padding: 12px;
+      background: #fff;
+      overflow: hidden;
+    }
+    .post-img.video-overlay.video-with-border .ratio {
+      transition: 0.5s;
+    }
+    .post-item:hover .post-img.video-overlay.video-with-border .ratio {
+      transform: scale(1.1);
+    }
     .post-img.video-overlay .post-date {
+
       position: absolute;
       right: 0;
       bottom: 0;
@@ -65,6 +89,10 @@
       z-index: 4;
       cursor: pointer;
       user-select: none;
+    }
+    .post-img.video-overlay.video-with-border .post-date {
+      top: auto;
+      bottom: 32px;
     }
 
     .post-img.video-overlay .video-click-overlay {
@@ -179,8 +207,8 @@
                 <div class="post-content d-flex flex-column">
                   <h3 class="post-title">Keeping People in Their Homes: The Impact of Emergency Rental Assistance on Evictions</h3>
                 </div>
-                <div class="post-img position-relative overflow-hidden">
-                  <img src="images/research&news/HUD.png" class="img-fluid" alt="Report">
+                <div class="post-img post-img-white position-relative overflow-hidden" style="--img-padding: 18px;">
+                  <img src="images/research&news/2026_KPiTH.png" class="img-fluid" alt="Report">
                   <span class="post-date">2026</span>
                 </div>
                 <div class="post-content d-flex flex-column">
@@ -201,14 +229,14 @@
               </div>
             </div><!-- End Post Item -->
 
-            <!-- #item1 -->
+            <!-- #item2 -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-reports recent-blog-posts">
               <div class="post-item position-relative h-100">
                 <div class="post-content d-flex flex-column">
                   <h3 class="post-title">Bay Area Housing Precarity Risk Model</h3>
                 </div>
                 <div class="post-img position-relative overflow-hidden">
-                  <img src="images/research&news/Bay_Area_Housing_Precarity_Risk_Model.png" class="img-fluid" alt="">
+                  <img src="images/research&news/2025_BAHPRM.png" class="img-fluid" alt="">
                   <span class="post-date">2025</span>
                 </div>
                 <div class="post-content d-flex flex-column">
@@ -229,14 +257,14 @@
               </div>
             </div><!-- End Post Item -->
             
-            <!-- #item2 -->
+            <!-- #item3 -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-articles recent-blog-posts">
               <div class="post-item position-relative h-100">
                 <div class="post-content d-flex flex-column">
                   <h3 class="post-title">What Lies Behind the Answers: Applying Machine Learning to Understand Tenants' Reaction to Eviction</h3>
                 </div>
-                <div class="post-img position-relative overflow-hidden">
-                  <img src="images/research&news/machine_learn_ten_graphic.png" class="img-fluid" alt="">
+                <div class="post-img post-img-white position-relative overflow-hidden" style="--img-padding: 18px;">
+                  <img src="images/research&news/2025_WLBtA.png" class="img-fluid" alt="">
                   <span class="post-date">2025</span>
                 </div>
                 <div class="post-content d-flex flex-column">
@@ -257,14 +285,14 @@
               </div>
             </div><!-- End Post Item -->
 
-            <!-- #item3 -->
+            <!-- #item4 -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-articles recent-blog-posts">
               <div class="post-item position-relative h-100">
                 <div class="post-content d-flex flex-column">
                   <h3 class="post-title">Domains of Housing Instability and Intimate Partner Violence Risk Among U.S. Tenants</h3>
                 </div>
-                <div class="post-img position-relative overflow-hidden">
-                  <img src="images/research&news/Intimate_partner_vio_housing.png" class="img-fluid" alt="">
+                <div class="post-img post-img-white position-relative overflow-hidden" style="--img-padding: 8px;">
+                  <img src="images/research&news/2025_DoHIaIPVRAUST.png" class="img-fluid" alt="">
                   <span class="post-date">2025</span> <!-- Jul 2025 -->
                 </div>
                 <div class="post-content d-flex flex-column">
@@ -285,14 +313,14 @@
               </div>
             </div><!-- End Post Item -->
 
-            <!-- #item4 -->
+            <!-- #item5 -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-report recent-blog-posts">
               <div class="post-item position-relative h-100">
                 <div class="post-content d-flex flex-column">
                   <h3 class="post-title">Rooted In Marin: Strategies for Anti-Displacement</h3>
                 </div>
                 <div class="post-img position-relative overflow-hidden">
-                  <img src="images/research&news/Rooted_In_Marin.png" class="img-fluid" alt="">
+                  <img src="images/research&news/2025_RIM.png" class="img-fluid" alt="">
                   <span class="post-date">2025</span> <!-- May 2025 -->
                 </div>
                 <div class="post-content d-flex flex-column">
@@ -320,7 +348,7 @@
                 <div class="post-content d-flex flex-column">
                   <h3 class="post-title">Evicting the American Dream</h3>
                 </div>
-                <div class="post-img video-overlay">
+                <div class="post-img video-overlay video-with-border">
                   <div class="ratio ratio-16x9">
                     <iframe
                       src="https://player.vimeo.com/video/1061006434"
