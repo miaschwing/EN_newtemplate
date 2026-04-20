@@ -1866,6 +1866,10 @@ section,
   padding: 30px;
 }
 
+.recent-blog-posts .post-item .post-content:first-of-type {
+  padding-bottom: 10px;
+}
+
 .recent-blog-posts .post-item .post-title {
   color: var(--heading-color);
   font-size: 20px;
