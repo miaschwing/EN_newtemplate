@@ -692,7 +692,7 @@ h6 {
 
 .page-title:before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 0%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 70%);
   position: absolute;
   inset: 0;
 }
