@@ -692,7 +692,7 @@ h6 {
 
 .page-title:before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent %);
+  background-color: color-mix(in srgb, var(--background-color), transparent 0%);
   position: absolute;
   inset: 0;
 }
@@ -1864,6 +1864,10 @@ section,
 
 .recent-blog-posts .post-item .post-content {
   padding: 30px;
+}
+
+.recent-blog-posts .post-item .post-content:first-of-type {
+  padding-bottom: 10px;
 }
 
 .recent-blog-posts .post-item .post-title {
